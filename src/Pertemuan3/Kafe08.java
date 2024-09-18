@@ -6,7 +6,7 @@ public class Kafe08 {
         boolean keanggotaan;
         int jmlKopi, jmlTeh, jmlRoti;
         double hargaKopi = 12000.0, hargaTeh = 7000.0, hargaRoti = 20000.0;
-        float diskon = 10 / 100f;
+        float diskon = 10 / 100;
 
         System.out.print("Masukkan keanggotaan (true/false): ");
         keanggotaan = input.nextBoolean();

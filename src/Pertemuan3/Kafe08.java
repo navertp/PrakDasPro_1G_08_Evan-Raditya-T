@@ -1,3 +1,4 @@
+package Pertemuan3;
 import java.util.Scanner;
 public class Kafe08 {
     public static void main(String[] args) {

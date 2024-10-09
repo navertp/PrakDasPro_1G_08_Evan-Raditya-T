@@ -12,12 +12,19 @@ public class Pemilihan2Percobaan108 {
         tahun08 = sc.nextInt();
 
         if ((tahun08 % 4) == 0) {
-            if ((tahun08 % 100) != 0){
+            if ((tahun08 % 100) == 0) {
+                if ((tahun08 % 400) == 0) {
+                    System.out.println("Tahun Kabisat");
+                } else {
+                    System.out.println("Bukan Tahun Kabisat");
+                }
+            } else {
                 System.out.println("Tahun Kabisat");
+            }
+
         } else {
             System.out.println("Bukan Tahun Kabisat");
-          } 
-        
         }
-     }
-  }
+    }
+    
+}

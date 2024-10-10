@@ -21,7 +21,7 @@ public class Pemilihan2Percobaan308 {
 
             else if (penghasilan08 <= 3000000) {
                 pajak08 = 0.15;}
-
+    
             else
                 pajak08 = 0.2;
 

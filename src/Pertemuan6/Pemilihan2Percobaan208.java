@@ -6,9 +6,9 @@ public class Pemilihan2Percobaan208 {
     public static void main(String[] args) {
         Scanner sc08 = new Scanner(System.in);
 
-        String member08;
-        int pilihanMenu08, jumlahBeli08;
-        double diskon08, harga08 = 0 , totalBayar08;
+        String member08, jenisPembayaran08;
+        int pilihanMenu08;
+        double diskon08, harga08 = 0 , totalBayar08, potonganQRIS08 = 1000;
         
         System.out.println("-------------------------");
         System.out.println("===== MENU KAFE JTI =====");
@@ -44,8 +44,17 @@ public class Pemilihan2Percobaan208 {
             System.out.println("Masukkan Pilihan Menu Dengan Benar");
             return;
         }
-
+        
         totalBayar08 = harga08 - (harga08 * diskon08);
+
+        System.out.print("Apakah anda ingin membayar menggunakan QRIS (y/n) ? = ");
+        jenisPembayaran08 = sc08.nextLine();
+
+        if (jenisPembayaran08.equalsIgnoreCase("y")) {
+            totalBayar08 -= potonganQRIS08;
+            System.out.println("Potongan QRIS sebesar Rp. 1.000 telah diterapkan");
+        }
+
         System.out.println("Total bayar setelah diskon = " + totalBayar08);}
     
     
@@ -66,11 +75,18 @@ public class Pemilihan2Percobaan208 {
             System.out.println("Masukkan Pilihan Menu Dengan Benar");
             return;
         }
-        System.out.println("Total Bayar = " + harga08);
+        System.out.print("Apakah anda ingin membayar menggunakan QRIS (y/n) ? = ");
+        jenisPembayaran08 = sc08.nextLine();
 
-        } else {
-            System.out.println("Member tidak valid");
-        }
+        if (jenisPembayaran08.equalsIgnoreCase("y")) {
+            harga08 -= potonganQRIS08;
+            System.out.println("Potongan QRIS sebesar Rp. 1.000 telah diterapkan");
+            
+        System.out.println("Total Bayar = " + harga08);
+}
+    } else
+        System.out.println("Member tidak valid");
+        
         System.out.println("--------------------------------------");
-    }
+}
 }

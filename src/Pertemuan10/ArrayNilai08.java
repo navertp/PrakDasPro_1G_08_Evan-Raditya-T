@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class ArrayNilai08 {
     public static void main(String[] args) {
-
         Scanner sc = new Scanner (System.in);
 
         int[] nilaiAkhir = new int[10];

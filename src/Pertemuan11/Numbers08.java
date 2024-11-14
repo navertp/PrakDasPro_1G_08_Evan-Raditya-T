@@ -13,5 +13,8 @@ public class Numbers08 {
         for (int i = 0; i < myNumbers.length; i++) {
             System.out.println(Arrays.toString(myNumbers[i]));
         }
+        for (int i = 0; i < myNumbers.length; i++) {
+            System.out.println("Panjang Baris Ke-" + (i+1) + ": " + myNumbers[i].length);
+        }
     }
 }

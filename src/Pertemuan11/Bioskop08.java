@@ -26,9 +26,8 @@ public class Bioskop08 {
 
         System.out.println("Penonton Pada Baris Ke-3");
         
-        for (int i = 0; i < penonton[2].length; i++) {
-            System.out.println(penonton[2][i]);
+        for (String i : penonton[2]) {
+            System.out.println(i);
         }
     }   
 }
-

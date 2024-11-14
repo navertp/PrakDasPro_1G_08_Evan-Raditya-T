@@ -7,7 +7,7 @@ public class BioskopWithScanner08 {
         Scanner sc = new Scanner(System.in);
 
         int baris, kolom;
-        String nama, next;
+        String nama, next, kursiKosong;
         String[][] penonton = new String[4][2];
 
         while (true) {
@@ -59,11 +59,13 @@ public class BioskopWithScanner08 {
                     System.out.println("Daftar Penonton : ");
                     for (int i = 0; i < penonton.length; i++) {
                         for (int j = 0; j < penonton[i].length; j++) {
-                            System.out.printf("Baris %d, Kolom %d: %s", i + 1, j + 1, penonton[i][j]);
+                            kursiKosong = (penonton[i][j] == null) ? "***" : penonton[i][j];
+                            System.out.printf("Baris %d, Kolom %d: %s", i + 1, j + 1, kursiKosong);
                             System.out.println();
                         }
                     }
                     break;
+                
 
                 case 3:
                     System.out.println("Program selesai");

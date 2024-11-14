@@ -33,7 +33,11 @@ public class BioskopWithScanner08 {
                             sc.nextLine();
 
                             if (baris >= 1 && baris <= 4 && kolom >= 1 && kolom <= 2) {
-                                break;
+                                if (penonton[baris - 1][kolom - 1] == null) {
+                                    break;
+                                } else {
+                                    System.out.println("Kursi sudah terisi. Pilih kursi yang lain");
+                                }
                             } else {
                                 System.out.println("Nomor baris atau kolom tidak tersedia");
                             }

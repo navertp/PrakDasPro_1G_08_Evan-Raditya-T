@@ -8,7 +8,7 @@ public class BioskopWithScanner08 {
 
         int baris, kolom;
         String nama, next, kursiKosong;
-        String[][] penonton = new String[4][2];
+            String[][] penonton = new String[4][2];
 
         while (true) {
             System.out.println("Menu : ");
@@ -38,6 +38,7 @@ public class BioskopWithScanner08 {
                                 } else {
                                     System.out.println("Kursi sudah terisi. Pilih kursi yang lain");
                                 }
+                                
                             } else {
                                 System.out.println("Nomor baris atau kolom tidak tersedia");
                             }

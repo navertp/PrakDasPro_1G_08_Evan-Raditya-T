@@ -2,7 +2,7 @@ package Pertemuan11;
 
 import java.util.Scanner;
 
-public class TugasC08 {
+public class TugasB08 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[][] survey = new int[10][6];
@@ -26,7 +26,7 @@ public class TugasC08 {
             }
         }
 
-        System.out.println("\nNilai rata-rata untuk setiap responden : ");
+        System.out.println("\nNilai rata-rata untuk setiap responden:");
         for (int i = 0; i < 10; i++) {
             double total = 0;
             for (int j = 0; j < 6; j++) {
@@ -34,6 +34,6 @@ public class TugasC08 {
             }
             rataResp = total / 6.0;
             System.out.println("Rata-rata untuk responden ke-" + (i + 1) + ": " + rataResp);
-        } 
+        }
     }
 }

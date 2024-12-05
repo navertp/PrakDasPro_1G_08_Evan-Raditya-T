@@ -3,14 +3,14 @@ package Pertemuan13;
 import java.util.Scanner;
 
 public class RekapKafe08 {
-    public static int[][] inputData(Scanner sc, String[] menu) {
-        int[][] penjualan = new int[menu.length][7];
+    public static int[][] inputData(Scanner sc, String[] menu, int jumlahHari) {
+        int[][] penjualan = new int[menu.length][jumlahHari];
         
         System.out.println("Input data penjualan:");
         for (int i = 0; i < menu.length; i++) {
             System.out.println("Menu: " + menu[i]);
             
-            for (int j = 0; j < 7; j++) {
+            for (int j = 0; j < jumlahHari; j++) {
                 System.out.print("Hari ke-" + (j + 1) + ": ");
                 penjualan[i][j] = sc.nextInt();
             }
@@ -41,19 +41,31 @@ public class RekapKafe08 {
 
     public static double hitungRataRata(int[] penjualanPerMenu) {
         int totalPenjualan = cariTotalPenjualan(penjualanPerMenu);
-        return totalPenjualan / 7.0;
+        return (double) totalPenjualan / penjualanPerMenu.length;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String[] menu = {"Kopi", "Teh", "Es Degan", "Roti Bakar", "Gorengan"};
-        int[][] penjualan = inputData(sc, menu);
+        System.out.print("Masukkan jumlah menu: ");
+        int jumlahMenu = sc.nextInt();
+        sc.nextLine();
+
+        String[] menu = new String[jumlahMenu];
+        for (int i = 0; i < jumlahMenu; i++) {
+            System.out.print("Masukkan nama menu ke-" + (i + 1) + ": ");
+            menu[i] = sc.nextLine();
+        }
+
+        System.out.print("Masukkan jumlah hari: ");
+        int jumlahHari = sc.nextInt();
+
+        int[][] penjualan = inputData(sc, menu, jumlahHari);
 
         System.out.println("\nData Penjualan:");
         for (int i = 0; i < menu.length; i++) {
             System.out.print(menu[i] + ": ");
-            for (int j = 0; j < 7; j++) {
+            for (int j = 0; j < jumlahHari; j++) {
                 System.out.print(penjualan[i][j] + " ");
             }
             System.out.println();

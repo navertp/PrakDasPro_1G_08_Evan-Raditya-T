@@ -13,7 +13,6 @@ public class Kubus08 {
         return hitungPer;
     }
 
-
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
         

@@ -16,8 +16,8 @@ public class SIAKAD08 {
 
         int[][] nilai = new int[jumlahSiswa][jumlahMatkul];
 
-        for (int i = 0; i < jumlahSiswa; i++) {
-            System.out.println("Input Nilai Mahasiswa Ke-" + (i + 1));
+            for (int i = 0; i < jumlahSiswa; i++) {
+                System.out.println("Input Nilai Mahasiswa Ke-" + (i + 1));
             double totalPerSiswa = 0;
 
             for (int j = 0; j < jumlahMatkul; j++) {

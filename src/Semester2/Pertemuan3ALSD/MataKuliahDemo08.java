@@ -6,8 +6,8 @@ public class MataKuliahDemo08 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Masukkan jumlah mata kuliah: ");
-        int jumlahMatkul = Integer.parseInt(sc.nextLine());
+            System.out.print("Masukkan jumlah mata kuliah: ");
+            int jumlahMatkul = Integer.parseInt(sc.nextLine());
 
         MataKuliah08[] arrayOfMataKuliah08 = new MataKuliah08[jumlahMatkul];
 

@@ -21,5 +21,15 @@ public class SortingMain08 {
         dataurut2.SelectionSort();
         System.out.println("Data Sudah Diurutkan Dengan SELECTION SORT (ASC)");
         dataurut2.tampil();
+
+        int c[] = {40, 10, 4, 9, 3};
+        
+        Sorting08 dataurut3 = new Sorting08(c, c.length);
+
+        System.out.println("Data Awal 3");
+        dataurut3.tampil();
+        dataurut3.InsertionSort();
+        System.out.println("Data Sudah Diurutkan Dengan INSERTION SORT (ASC)");
+        dataurut3.tampil();
     }
 }

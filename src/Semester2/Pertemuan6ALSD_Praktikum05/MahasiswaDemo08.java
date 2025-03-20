@@ -33,6 +33,12 @@ public class MahasiswaDemo08 {
         list.bubbleSort();
         list.tampil();
         
-        sc.close();
+        System.out.println("Data Yang Sudah Terurut Menggunakan SELECTION SORT (ASC)");
+        list.selectionSort();
+        list.tampil();
+
+        System.out.println("Data Yang Sudah Terurut Menggunakan INSERTION SORT (DESC)");
+        list.insertionSort();
+        list.tampil();
     }
 }

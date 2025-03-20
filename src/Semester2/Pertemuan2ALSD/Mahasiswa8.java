@@ -2,13 +2,13 @@ package Semester2.Pertemuan2ALSD;
 
 import java.util.Scanner;
 
-public class Mahasiswa08 {
+public class Mahasiswa8 {
     Scanner sc = new Scanner(System.in);
 
     String nama;
     String nim;
     String kelas;
-    double ipk;
+    public double ipk;
 
     void tampilkanInformasi() {
         System.out.println("Nama: " + nama);
@@ -40,10 +40,10 @@ public class Mahasiswa08 {
         }
     }
 
-    public Mahasiswa08() {
+    public Mahasiswa8() {
     }
 
-    public Mahasiswa08(String nm, String nim, double ipk, String kls) {
+    public Mahasiswa8(String nm, String nim, double ipk, String kls) {
         nama = nm;
         this.nim = nim;
         this.ipk = ipk;

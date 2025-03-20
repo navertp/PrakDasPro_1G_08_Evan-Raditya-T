@@ -1,4 +1,4 @@
-package Semester2.Pertemuan6ALSD_Praktkum05;
+package Semester2.Pertemuan6ALSD_Praktikum05;
 
 public class SortingMain08 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Semester2.Pertemuan6ALSD_Praktkum05;
+package Semester2.Pertemuan6ALSD_Praktikum05;
 
 public class Sorting08 {
     int[] data;

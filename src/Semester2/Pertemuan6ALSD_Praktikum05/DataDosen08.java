@@ -68,4 +68,63 @@ public class DataDosen08 {
             dataDosen[j + 1] = key;
         }
     }
+    
+    void pencarianDataSequential08(String nama) {
+        boolean ditemukan = false;
+        int jumlahHasil = 0;
+    
+        for (int i = 0; i < idx; i++) {
+            if (dataDosen[i].nama.equalsIgnoreCase(nama)) {
+                System.out.println("\nData ditemukan:");
+                dataDosen[i].tampil();
+                ditemukan = true;
+                jumlahHasil++;
+            }
+        }
+    
+        if (!ditemukan) {
+            System.out.println("\nData dengan nama '" + nama + "' tidak ditemukan.");
+        } else if (jumlahHasil > 1) {
+            System.out.println("\nPeringatan: Ditemukan lebih dari satu data dengan nama yang sama!");
+        }
+    }
+    
+    void pencarianDataBinary08(int usia) {
+        sortingASC();
+        int low = 0;
+        int high = idx - 1;
+        boolean ditemukan = false;
+        int jumlahHasil = 0;
+    
+        while (low <= high) {
+            int mid = (low + high) / 2;
+    
+            if (dataDosen[mid].usia == usia) {
+                System.out.println("\nData ditemukan:");
+                for (int i = mid; i >= 0 && dataDosen[i].usia == usia; i--) {
+                    dataDosen[i].tampil();
+                    ditemukan = true;
+                    jumlahHasil++;
+                }
+                for (int i = mid + 1; i < idx && dataDosen[i].usia == usia; i++) {
+                    dataDosen[i].tampil();
+                    ditemukan = true;
+                    jumlahHasil++;
+                }
+                break;
+            }
+    
+            if (dataDosen[mid].usia < usia) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+    
+        if (!ditemukan) {
+            System.out.println("\nData dengan usia '" + usia + "' tidak ditemukan.");
+        } else if (jumlahHasil > 1) {
+            System.out.println("\nData ditemukan lebih dari 1");
+        }
+    }    
 }

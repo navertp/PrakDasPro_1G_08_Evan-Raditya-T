@@ -62,4 +62,17 @@ public class StackTugasMahasiswa08 {
         }
         System.out.println("");
     }
+
+    public Mahasiswa08 bottom() {
+        if (!isEmpty()) {
+            return stack[0];
+        } else {
+            System.out.println("Stack Kosong");
+            return null;
+        }
+    }
+
+    public int hitungTugas() {
+        return top + 1;
+    }
 }

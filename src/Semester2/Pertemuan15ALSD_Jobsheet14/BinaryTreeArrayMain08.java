@@ -16,5 +16,14 @@ public class BinaryTreeArrayMain08 {
         bta.populateData(dataMahasiswa,idxLast);
         System.out.println("\nInorder Traversal Mahasiswa: ");
         bta.traverseInOrder(0);
+
+        System.out.println("\nPreOrder Traversal Mahasiswa:");
+        bta.traversePreOrder(0);
+
+        bta.add(new Mahasiswa08("244160222", "Adi", "C", 3.59));
+        System.out.println("\nMahasiswa Ditambahkan");
+
+        System.out.println("\nInOrder Traversal Setelah Penambahan:");
+        bta.traverseInOrder(0);
     }
 }
